@@ -1,6 +1,6 @@
-fin = open("whole.md", "rt")
-fout = open("md/intro.md", "wt")
-fsidebar = open("md/_sidebar.md", "wt")
+fin = open("docs/whole.md", "rt")
+fout = open("docs/intro.md", "wt")
+fsidebar = open("docs/_sidebar.md", "wt")
 first_time = True
 
 for line in fin:
@@ -22,7 +22,7 @@ for line in fin:
     new_chapter = new_chapter.replace('/', '')
     new_chapter = new_chapter.replace('\n', '')
     new_chapter_file_name="".join(x for x in new_chapter if x.isalnum())
-    fout = open('md/'+new_chapter_file_name+".md", "wt")
+    fout = open('docs/'+new_chapter_file_name+".md", "wt")
     fout.write(line)
     fsidebar.write('  - ['+new_chapter.rstrip()+']('+new_chapter_file_name+'.md)')
     fsidebar.write('\n')
