@@ -1,0 +1,1 @@
+pandoc -o C:\Users\fgraciani\docsify\docs\whole.md --atx-headers --extract-media=./ "C:\Users\fgraciani\docsify\docs\FIXM Implementation Guidance - ALPHA - clean.docx" -t gfm
